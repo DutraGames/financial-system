@@ -71,7 +71,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 500px;
+  width: 400px;
   background-color: #fff;
   border-radius: 20px;
   margin: 30px auto;
@@ -81,6 +81,7 @@
 .box-tras h2{
   background-color: #fff;
   border-bottom: 1px solid #ccc;
+  margin-top: 20px;
 }
 
 .box-tras label{
