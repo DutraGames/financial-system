@@ -15,7 +15,7 @@
 
 .box-saldo h2{
   font-size: 2rem;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #ccc;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -30,6 +30,7 @@
   color: #009;
   font-size: 2.5rem;
   font-weight: bold;
+  border-bottom: 1px solid #ccc;
 }
 
 .box-money{
