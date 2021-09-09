@@ -4,5 +4,6 @@
 
 - [x] Layout do projeto
 - [x] Funcionalidade de transação
-- [x] Salvar no localStorage
-- [ ] Criar últimas trasações no layout
+- [x] Salvar funcionalidade de trasação no localStorage
+- [x] Criar últimas trasações no layout
+- [ ] Salvar últimas trasações no localStorage

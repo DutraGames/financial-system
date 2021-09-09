@@ -4,20 +4,23 @@
   box-sizing: border-box;
   background-color: #ddd;
 }
+body{
+  height: 100vh;
+}
 
 .box-saldo{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .box-saldo h2{
   font-size: 2rem;
   border-bottom: 1px solid #ccc;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .box-saldo p{
@@ -64,6 +67,59 @@
 
 .box-money span:first-child{
   border-bottom: 1px solid #ccc;
+}
+
+.box-ultimas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.box-ultimas h2{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.box-ultima-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar{
+  background-color: #ccc;
+  width: 5px;
+  border-radius: 10px;
+}
+
+.box-ultima-list li{
+  background-color: #fff;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 90%;
+}
+
+.box-ultima-list li p{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 17px;
 }
 
 .box-tras{

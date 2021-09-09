@@ -8,6 +8,7 @@ const [receita, setReceita] = useState(0)
 const [despesas, setDespesas] = useState(0)
 const [action, setAction] = useState('Salário')
 const [valor, setValor] = useState(1)
+const [trans, setTrans] = useState([])
 
 useEffect(() => {
 
@@ -34,7 +35,8 @@ localStorage.setItem('despesas', despesas)
 function AddTras(){
   if(action === 'Salário'){
     setReceita(receita + valor)
-  setSaldo(saldo + valor)
+    setSaldo(saldo + valor)
+    setTrans([...trans, {id: trans.length, acao: action, qtn: valor, cor: '#0f0'}])
 
   localStorage.setItem("saldo", parseFloat(saldo + valor))
   localStorage.setItem("despesas", parseFloat(despesas))
@@ -43,11 +45,14 @@ function AddTras(){
   }else{
     setDespesas(despesas + valor)
     setSaldo(saldo - valor)
+    setTrans([...trans, {id: trans.length, acao: action, qtn: valor, cor: '#f00'}])
 
     localStorage.setItem("saldo", parseFloat(saldo - valor))
     localStorage.setItem("despesas", parseFloat(despesas + valor))
     localStorage.setItem("receita", parseFloat(receita))
   }
+
+  
 
 }
 
@@ -71,6 +76,19 @@ return(
       <span>Despesas</span>
       <span style={{color:'#d00'}}>R$ {despesas.toFixed(2)}</span>
     </div>
+  </div>
+
+  <div className="box-ultimas">
+    <h2>Últimas Trasações</h2>
+    <ul className="box-ultima-list">
+      {trans.map(tran =>(
+        <li key={tran.id}>
+          <p>{tran.acao}:</p>
+          <p>R$ {tran.qtn}</p>
+          <span style={{width: '5px', height: '100%', backgroundColor: tran.cor}}></span>
+        </li>
+        ))}
+      </ul>
   </div>
 
   <div className="box-tras">
