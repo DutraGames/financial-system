@@ -92,8 +92,8 @@ return(
       {trans.map(tran =>(
         <li key={tran.id}>
           <p>{tran.acao}:</p>
-          <p>R$ {tran.qtn}</p>
-          <span style={{width: '5px', height: '100%', backgroundColor: tran.cor}}></span>
+          <p>R$ {tran.qtn.toFixed(2)}</p>
+          <span style={{width: '5px', height: '100%', backgroundColor: tran.cor}}>&nbsp;</span>
         </li>
         ))}
       </ul>
