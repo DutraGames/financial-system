@@ -1,9 +1,7 @@
-# Sistema Financeiro
+# Financial System
 
-## Passos:
+## 📰Description:
 
-- [x] Layout do projeto
-- [x] Funcionalidade de transação
-- [x] Salvar funcionalidade de trasação no localStorage
-- [x] Criar últimas trasações no layout
-- [x] Salvar últimas trasações no localStorage
+I wanted to make a simple visual system to keep track of my finances like bills and stuff.
+
+So I created this simple system in ReactJS.
