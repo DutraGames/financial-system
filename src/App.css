@@ -25,15 +25,15 @@ body{
 
 .box-saldo p{
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: bold;
+  border-bottom: 1px solid #ccc;
 }
 
 .box-saldo span{
   color: #009;
   font-size: 2.5rem;
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
 }
 
 .box-money{
@@ -91,7 +91,8 @@ body{
   flex-direction: column;
   overflow-y: auto;
   width: 100%;
-  height: 100px;
+  min-height: 0;
+  max-height: 100px;
   background-color: #fff;
 }
 
@@ -121,7 +122,6 @@ body{
   padding: 0 10px;
   font-size: 17px;
 }
-
 .box-tras{
   margin-top: 30px;
   display: flex;

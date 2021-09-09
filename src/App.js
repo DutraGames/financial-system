@@ -29,6 +29,13 @@ if ("despesas" in localStorage) {
 } else {
 localStorage.setItem('despesas', despesas)
 }
+
+if ("trans" in localStorage){
+  setTrans(JSON.parse(localStorage.getItem("trans")))
+}else{
+  localStorage.setItem("trans", JSON.stringify(trans))
+}
+
 }, [])
 
 
@@ -41,6 +48,8 @@ function AddTras(){
   localStorage.setItem("saldo", parseFloat(saldo + valor))
   localStorage.setItem("despesas", parseFloat(despesas))
   localStorage.setItem("receita", parseFloat(receita + valor))
+  localStorage.setItem("trans", JSON.stringify(trans))
+
 
   }else{
     setDespesas(despesas + valor)
@@ -50,6 +59,7 @@ function AddTras(){
     localStorage.setItem("saldo", parseFloat(saldo - valor))
     localStorage.setItem("despesas", parseFloat(despesas + valor))
     localStorage.setItem("receita", parseFloat(receita))
+    localStorage.setItem("trans", JSON.stringify(trans))
   }
 
   
@@ -84,8 +94,8 @@ return(
       {trans.map(tran =>(
         <li key={tran.id}>
           <p>{tran.acao}:</p>
-          <p>R$ {tran.qtn}</p>
-          <span style={{width: '5px', height: '100%', backgroundColor: tran.cor}}></span>
+          <p>R$ {tran.qtn.toFixed(2)}</p>
+          <span style={{width: '5px', height: '100%', backgroundColor: tran.cor}}>&nbsp;</span>
         </li>
         ))}
       </ul>
